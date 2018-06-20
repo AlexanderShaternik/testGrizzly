@@ -1,0 +1,353 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	padding-top: 160px
+	padding-bottom: 245px
+	min-height: 100vh
+	input, textarea
+		border: $dark_text 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+		&::placeholder
+			color: $dark_text
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+header
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	z-index: 100
+
+.top-line
+	background-color: $accent
+	color: $dark_text
+	font-size: 13px
+	.container
+		height: 40px
+	p
+		white-space: nowrap
+		line-height: 40px
+		margin-bottom: 0
+	img
+		padding-right: 5px
+
+
+.search
+	display: inline-block
+	font-weight: 500
+	font-size: 14px
+	p
+		display: inline-block
+	.ion-md-search
+		font-size: 17px
+		padding-left: 10px
+
+.ion-md-person
+	margin-left: 13px
+	padding-left: 13px
+	border-left: 1px solid $dark_text
+	font-size: 17px
+
+.middle-line
+	background-color: #fff
+	.container
+		height: 80px
+	p
+		font-size: 16px
+		font-weight: 800
+		white-space: nowrap
+		line-height: 80px
+		margin-bottom: 0
+	.phones
+		display: flex
+		justify-content: space-between
+.logo
+	a
+		p
+			font-size: 28px
+			font-weight: 500
+			color: #000
+			text-decoration: none
+
+.call
+	height: 80px
+	display: flex
+
+.button
+	align-self: center
+	display: flex
+	border: none
+	color: #fff
+	text-decoration: none
+	background-color: $nav-color
+	padding: 7px 20px
+	font-size: 12px
+	font-weight: 800
+	border-radius: 4px
+	text-align: center
+	outline: none
+	transition: background-color .1s ease
+	cursor: pointer
+	white-space: nowrap
+	margin-left: 25px
+	&:focus, &:hover
+		text-decoration: none
+		color: #fff
+	&:hover
+		background-color: lighten($nav-color, 5%)
+
+	&:active
+		background-color: darken($nav-color, 5%)
+
+
+		
+.bottom-line
+	background-color: $nav-color
+	color: #fff
+	height: 40px
+	.nav>li>a
+		padding: 10px 25px
+		font-size: 14px
+		font-weight: 800
+		color: #fff
+		transition: background-color .5s ease
+		text-transform: uppercase
+		text-decoration: none
+		&:focus, &:hover
+			background-color: lighten($nav-color, 5%)
+
+
+.basket
+	position: relative
+	p
+		display: inline-block
+		padding-right: 40px
+		line-height: 40px
+	.ion-md-cart
+		position: absolute
+		font-size: 26px
+		top: 0
+		left: 85px
+	img
+		position: absolute
+		display: inline-block
+		height: 15px
+		width: 15px
+		top: 5px
+		left: 100px
+	.basket-count
+		position: absolute
+		top: 3px
+		left: 104px
+		font-size: 12px
+
+.carousel-inner
+	background-color: $accent
+	overflow: visible
+	.first-slide
+		height: 330px
+		background: url(../img/Layer.jpg) no-repeat center -445px
+		opacity: .25
+
+
+.carousel-caption
+	bottom: 90px
+	h1
+		font-size: 40px
+		font-family: robotoSlab,sans-serif
+		font-weight: 700
+	p
+		font-size: 22px
+
+.feedback
+	position: relative
+
+.form, .modal_form
+	width: 100%
+	position: absolute
+	top: -30px
+	background-color: $accent
+	color: #fff
+	p, .title
+		font-family: robotoSlab,sans-serif
+		letter-spacing: normal
+		font-weight: 800
+		color: #fff
+		text-align: left
+		padding-left: 10%
+		margin: 15px 0
+	.title
+		font-size: 22px
+	button
+		margin-bottom: 15px
+		text-align: left
+		margin-left: 10%
+		background-color: #e2a000
+		text-transform: uppercase
+		font-size: 14px
+		padding: 5px 40px
+		&:focus, &:hover
+			text-decoration: none
+			color: #fff
+		&:hover
+			background-color: lighten(#e2a000, 5%)
+		&:active
+			background-color: darken(#e2a000, 5%)
+
+	input,textarea
+		margin-left: 10%
+		margin-bottom: 15px
+		padding: 5px 15px
+		width: 80%
+		background-color: $accent
+
+.modal_form
+	display: none
+	position: fixed
+	left: 50%
+	transform: translate(-50%, 0)
+	width: 300px
+	height: 220px
+	z-index: 101
+	p
+		line-height: 1.65
+	i
+		color: $dark_text
+		position: absolute
+		top: 10px
+		right: 15px
+		&:hover
+			color: lighten($dark_text, 5%)
+		&:active
+			color: darken($dark_text, 5%)
+
+.overlay
+	z-index: 100
+	position: fixed
+	background-color: #000
+	opacity: .7
+	width: 100%
+	height: 100%
+	top: 0
+	left: 0
+	display: none
+
+.contacts, .location
+	.text-left
+		padding-left: 0
+
+.title
+	color: $accent
+	font-size: 18px
+	font-weight: 800
+
+.contacts_info,.location_info
+	margin-bottom: 40px
+	ul
+		padding-left: 0
+		li
+			list-style-type: none
+			font-size: 15px
+			font-weight: 500
+			white-space: nowrap
+			i
+				padding-right: 5px
+				color: $nav-color
+
+.location
+	background-color: #eaecee
+	padding-top: 55px
+	li
+		margin-bottom: 15px
+
+.breadcrumb
+	padding-left: 0
+	background-color: #fff
+	a
+		text-decoration: none
+		color: #000
+	.active
+		a
+			color: $nav_color
+
+.breadcrumb>li+li:before
+	content: ">"
+	color: #000
+
+#map
+	width: 100%
+	height: 405px
+
+
+footer
+	position: absolute
+	bottom: 0
+	width: 100%
+	height: 245px
+	background-color: $accent
+	color: $dark_text
+	.logo
+		margin: 20px 0
+		a
+			p
+				font-size: 24px
+				color: $dark_text
+				text-decoration: none
+	.navbar
+		color: #fff
+		height: 40px
+		.container
+			padding-top: 20px
+			padding-bottom: 10px
+			border-top: $dark_text 1px solid
+			border-bottom: $dark_text 1px solid
+		.nav>li>a
+					padding: 10px 40px
+					color: $dark_text
+					font-size: 14px
+					transition: color .5s ease,background-color .5s ease
+					text-transform: uppercase
+					text-decoration: none
+					&:focus, &:hover
+						background-color: lighten($accent, 5%)
+						color: #fff
+	.footer-contacts
+		margin-top: 35px
+		i
+			padding: 10px 15px
+
+
+@import "media" // Always at the end
